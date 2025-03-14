@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    /* position: fixed; */
+    background-color: #bdecf4 !important;
+    /* Light Blue */
+}
+
+.top {
+    top: 0;
+    position: sticky;
+}
+
+main {
+    background-image: url(vidyamam/images/home\ bak1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    
+}
+.homehead{
+    margin-top: 80px;
+}
+.writ1{
+    color: rgb(19, 16, 16);
+    font-family: "Grape Nuts", cursive;
+}
+.home{
+    display: flex;
+    justify-content: center;
+}
+.writ3{
+    color: rgb(71, 65, 71);
+    font-family: "Turret Road", sans-serif;
+}
+.writ2{
+    color: rgb(15, 15, 14);
+}
+/* .writ1 {
+    position: relative;
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: slideIn 1s ease-in-out forwards;
+} */
+ .writ1{
+    
+ }
+ .seprated{
+    color: rgb(69, 69, 87);
+ }
+ @keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to different classes */
+.writ1 {
+    animation: slideInFromBottom 1s ease-in-out;
+}
+
+.writ2 {
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.writ3 {
+    animation: slideInFromRight 1.2s ease-in-out;
+}
+
+.seprated {
+    animation: slideInFromBottom 1.5s ease-in-out;
+}
+.pagi{
+    background-image: url(vidyamam/images/pexels-fmaderebner-238622.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    height: 1200px;
+}
+.home{
+    background-image: url(vidyamam/images/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.pageHead{
+    font-family: "Grape Nuts", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px); /* Moves the card slightly up */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+.page3{
+    background-image: url(vidyamam/images/pexels-haleyve-2087391.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.review{
+    background-image: url(vidyamam/images/wall\ pap.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    height: 700px;
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background: white;
+}
+
+.flip-card-back {
+    background: #007bff;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Bounce-in Animation */
+.animated-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated-card:hover {
+    transform: scale(1.05);
+}
+.navbar {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Underline Hover Effect */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff; /* Change color as needed */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #007bff !important;
+}
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, #004e92 0%, #000428 100%);
+    color: white;
+    padding-top: 60px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Wave Effect */
+.footer-wave {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('https://i.imgur.com/ZAts69j.png') repeat-x;
+    animation: wave-animation 5s linear infinite;
+}
+
+@keyframes wave-animation {
+    from { background-position-x: 0; }
+    to { background-position-x: 1000px; }
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #ffeb3b;
+    transform: translateX(5px);
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin-right: 15px;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #ffeb3b;
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-brand {
+    font-weight: bold;
+    color: #ffeb3b;
+}
